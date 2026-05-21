@@ -5,10 +5,20 @@ import lombok.Setter;
 @Getter
 @Setter
 public class User {
+	private String id;
 	private String name;
 	private String email;
 	private Double age;
 	private String corporation;
+	
+	
+	public String GetId() {
+		return id;
+	}
+	
+	public void SetId(String id) {
+		this.id = id;
+	}
 	
 	public String getName() {
 		return name;

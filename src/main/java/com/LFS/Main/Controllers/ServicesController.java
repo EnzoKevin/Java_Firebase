@@ -1,5 +1,6 @@
 package com.LFS.Main.Controllers;
 
+import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -29,8 +30,8 @@ public class ServicesController {
 	
 	
 	@GetMapping("/get")
-	public String helloWorld() {
-		return Service.HelloService("Enzo");
+	public List<User> helloWorld() throws ExecutionException, InterruptedException {
+		return Service.GetAllUsers();
 	}
 	
 	@PostMapping("/create")
